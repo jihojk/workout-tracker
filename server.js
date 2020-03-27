@@ -6,7 +6,7 @@ mongodb+srv://jihojk:<usuckman11>@cluster0-dux9w.azure.mongodb.net/test?retryWri
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
-  useFindAndModify: false
+  useUnifiedTopology: true
 });
 
 const app = express();
