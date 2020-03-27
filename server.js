@@ -1,5 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
+var morgan = require('morgan');
+const app = express();
+
 const PORT = process.env.PORT || 3000;
 
 mongodb+srv://jihojk:<usuckman11>@cluster0-dux9w.azure.mongodb.net/test?retryWrites=true&w=majority
@@ -9,7 +12,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useUnifiedTopology: true
 });
 
-const app = express();
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use(express.static("public"));
