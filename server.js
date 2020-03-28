@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://jihojk:usuckman11@cluster0-dux9w.azure.mongodb.net/test?retryWrites=true&w=majority", {
   useNewUrlParser: true,
-  useUnifiedTopology: false
+  useFindAndModify: false
 });
 
 
