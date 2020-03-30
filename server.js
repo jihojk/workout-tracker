@@ -6,9 +6,14 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-// mongodb+srv://jihojk:<password>@cluster0-dux9w.azure.mongodb.net/test?retryWrites=true&w=majority
+// mongodb+srv://jihojk:usuckman11@cluster0-dux9w.azure.mongodb.net/test?retryWrites=true&w=majority
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://jihojk:usuckman11@cluster0-dux9w.azure.mongodb.net/test?retryWrites=true&w=majority", {
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://jihojk:usuckman11@cluster0-dux9w.azure.mongodb.net/test?retryWrites=true&w=majority", {
+//   useNewUrlParser: true,
+//   useFindAndModify: false
+// });
+
+mongoose.connect("mongodb://heroku_v767lbl3:usuckman11@ds145292.mlab.com:45292/heroku_v767lbl3", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
