@@ -13,16 +13,16 @@ const PORT = process.env.PORT || 3000;
 //   useFindAndModify: false
 // });
 
-mongoose.connect("mongodb://heroku_v767lbl3:usuckman11@ds145292.mlab.com:45292/heroku_v767lbl3", {
-  useNewUrlParser: true,
-  useFindAndModify: false
-});
-
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+// mongoose.connect("mongodb://heroku_v767lbl3:usuckman11@ds145292.mlab.com:45292/heroku_v767lbl3", {
 //   useNewUrlParser: true,
 //   useFindAndModify: false
-
 // });
+
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+
+});
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
